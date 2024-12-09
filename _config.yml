@@ -1,1 +1,7 @@
 remote_theme: devich/quick@0.0.1
+lang: en-US
+bg_color: dark
+theme_color: azure
+title: Quick
+
+
