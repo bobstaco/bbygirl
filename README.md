@@ -1,4 +1,5 @@
-<h1 style ="color:Violet;"> Dawg </h1>
+<h1 style="color: Violet; font-weight: bold;">Dawg</h1>
+
 
 
  <p style="color:Violet;"> wsg bbygirl </p>
