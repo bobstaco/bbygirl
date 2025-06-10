@@ -206,3 +206,13 @@ details[open] summary::after {
 details summary::after {
     content: " ▼";
 }
+.page {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: none;
+}
+
+.page.active {
+  display: block;
+  opacity: 1;
+}
