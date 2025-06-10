@@ -28,8 +28,17 @@ body {
 header {
     background: #1a1a2e;
     color: white;
-    padding: 30px 20px;
+    padding: 80px 20px;
     text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 8px;
 }
 
 header h1 {
@@ -83,18 +92,30 @@ nav ul li a {
     font-weight: 600;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     background: #0f3460;
     border-radius: 6px;
+    border-bottom: 2px solid #93c5fd;
 }
 
 /* Section Layout */
 section {
     padding: 40px 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    display: none;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
 }
 
 .card {
-    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -104,7 +125,8 @@ section {
 }
 
 .dark-mode .card {
-    background: #1f2937;
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Headers */
