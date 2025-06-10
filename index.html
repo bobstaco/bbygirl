@@ -1,83 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ezequiel Castillo - Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ezequiel Castillo - Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1>Ezequiel Castillo</h1>
-        <p>Cybersecurity Analyst | Threat Detection & Response</p>
-        <nav>
-            <ul>
-                <li><a href="#home" onclick="showPage('home')">Home</a></li>
-                <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
-                <li><a href="#certifications" onclick="showPage('certifications')">Certifications</a></li>
-                <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home" class="page">
-        <h2>About Me</h2>
-        <p>Passionate cybersecurity professional with expertise in threat analysis, phishing investigations, and security compliance. Adept at handling security incidents and deploying security solutions to mitigate risks.</p>
-    </section>
-    
-    <section id="projects" class="page" style="display:none;">
-        <h2>Cybersecurity Projects</h2>
-        <ul>
-            <li>
-  <strong>Pi Hole:</strong> Implemented a network-wide ad-blocking solution using Pi-hole on a Raspberry Pi, integrated with WireGuard VPN via PiVPN. This setup ensures ad-free browsing across all devices on the local network and provides secure, encrypted access to the home network from remote locations.
-  <br>
-    <details>
-        <summary> View Pi-hole Setup</summary>
-        <img src="assets/img/pihole-setup.png" alt="Pi-hole and VPN setup diagram" alt="Pi-hole and VPN setup diagram" style="max-width: 100%; height: auto; margin-top: 10px;">
-    </details>
-  
-</li>
-            <li><strong>Phishing Analysis:</strong> Conducted email header investigations to detect spoofing.</li>
-            <li><strong> Pwnagotchi Build – Wi-Fi Hacking AI Companion:</strong> Built a fully portable Pwnagotchi device for wireless network auditing and WPA handshake capture. Configured and calibrated the system using PiSugar3 for power management and RTC synchronization. Integrated a Waveshare e-ink display and customized config.toml for automated operation. Connected via USB Ethernet gadget mode and enabled SSH control from host PC.</li>
-       <details>
-           <summary>View Pwnagotchi</summary>
-           <img src="assets/img/Screenshot 2025-06-09 182818.png" alt=" Pwnagotchi: Deep Reinforcement Learning for WiFi pwning!" style="max-width: 100%; height: auto; margin-top: 10px;">
-       </details>
-            
-        </ul>
-    </section>
-    
-    <section id="certifications" class="page" style="display:none;">
-        <h2>Certifications</h2>
-        <ul>
-            <li>CompTIA PenTest+</li>
-            <li>CompTIA CySA+</li>
-            <li>CompTIA Security+</li>
-            <li>Linux Essentials</li>
-            <li>SSCP Systems Security Certified Practitioner Certification</li>
-            <li>CompTIA Network+</li>
-            <li>ITIL v4 Foundation</li>
-            <li>CompTIA A+</li>
-            <li>CompTIA Project+</li>
-        </ul>
-    </section>
-    
-    <section id="contact" class="page" style="display:none;">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ezequielcastillo116@gmail.com">ezequielcastillo116@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ezequiel-castillo-b48b03162/" target="_blank">LinkedIn Profile</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Ezequiel Castillo | Cybersecurity Portfolio</p>
-    </footer>
-    
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
-            document.getElementById(pageId).style.display = 'block';
-        }
+  <header>
+    <h1>Ezequiel Castillo</h1>
+    <p>Cybersecurity Analyst | Threat Detection & Response</p>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showPage('home')">Home</a></li>
+        <li><a href="#projects" onclick="showPage('projects')">Projects</a></li>
+        <li><a href="#certifications" onclick="showPage('certifications')">Certifications</a></li>
+        <li><a href="#contact" onclick="showPage('contact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    </script>
+  <section id="home" class="page" style="display:block;">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>Passionate cybersecurity professional with expertise in threat analysis, phishing investigations, and security compliance. Adept at handling security incidents and deploying security solutions to mitigate risks.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="page" style="display:none;">
+    <div class="card">
+      <h2>Cybersecurity Projects</h2>
+      <ul>
+        <li>
+          <strong>Pi Hole:</strong> Implemented a network-wide ad-blocking solution using Pi-hole on a Raspberry Pi, integrated with WireGuard VPN via PiVPN.
+          <details>
+            <summary>View Pi-hole Setup</summary>
+            <img src="assets/img/pihole-setup.png" alt="Pi-hole and VPN setup diagram" style="max-width: 100%; height: auto; margin-top: 10px;" />
+          </details>
+        </li>
+        <li><strong>Phishing Analysis:</strong> Conducted email header investigations to detect spoofing.</li>
+        <li>
+          <strong>Pwnagotchi Build – Wi-Fi Hacking AI Companion:</strong> Built a portable Pwnagotchi device for wireless auditing.
+          <details>
+            <summary>View Pwnagotchi</summary>
+            <img src="assets/img/Screenshot 2025-06-09 182818.png" alt="Pwnagotchi Screenshot" style="max-width: 100%; height: auto; margin-top: 10px;" />
+          </details>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="certifications" class="page" style="display:none;">
+    <div class="card">
+      <h2>Certifications</h2>
+      <ul>
+        <li>CompTIA PenTest+</li>
+        <li>CompTIA CySA+</li>
+        <li>CompTIA Security+</li>
+        <li>Linux Essentials</li>
+        <li>SSCP Systems Security Certified Practitioner</li>
+        <li>CompTIA Network+</li>
+        <li>ITIL v4 Foundation</li>
+        <li>CompTIA A+</li>
+        <li>CompTIA Project+</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="page" style="display:none;">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:ezequielcastillo116@gmail.com">ezequielcastillo116@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ezequiel-castillo-b48b03162/" target="_blank">LinkedIn Profile</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ezequiel Castillo | Cybersecurity Portfolio</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+      document.getElementById(pageId).style.display = 'block';
+    }
+
+    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
