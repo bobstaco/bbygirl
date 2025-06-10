@@ -82,14 +82,22 @@
   </footer>
 
   <script>
-    function showPage(pageId) {
-      document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
-      document.getElementById(pageId).style.display = 'block';
-    }
+function showPage(pageId) {
+  // Hide all sections
+  document.querySelectorAll('.page').forEach(page => {
+    page.classList.remove('active');
+    setTimeout(() => (page.style.display = 'none'), 300);
+  });
 
-    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
+  // Show the selected section
+  const activePage = document.getElementById(pageId);
+  activePage.style.display = 'block';
+  setTimeout(() => activePage.classList.add('active'), 10);
+
+  // Highlight the active nav link
+  document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+  document.querySelector(`nav a[href="#${pageId}"]`)?.classList.add('active');
+}
   </script>
 </body>
 </html>
